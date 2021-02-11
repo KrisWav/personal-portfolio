@@ -1,12 +1,24 @@
 .home{
-
   &-cover{
     height: 100vh;
     width: 100%;
-  }
-  &-bg{
+    //background-image: url("../../assets/home-cover.jpg");
+    z-index: 10;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    &-content{
+      height: 100vh;
+      &-inner{
+        grid-column: 1 / span 4;
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        .btn-link{
+          position: absolute;
+          bottom: 72px;
+        }
+      }
+    }
   }
 }

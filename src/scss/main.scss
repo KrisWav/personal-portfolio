@@ -1,14 +1,42 @@
 @import "abstracts/variables";
 
+@import "components/buttons";
+
 @import "layout/home.scss";
 
 body{
   margin: 0;
+  scroll-behavior: smooth;
 }
 .mlr-main{
   margin: 0 72px 0 72px;
   box-sizing: border-box !important;
 }
-grid{
-
+.grid{
+  display: grid;
+  grid-column-gap: 16px;
+  grid-template-columns: repeat(12,1fr);
+}
+h1,h2,h3,h4{
+  margin: 0;
+}
+.t{
+  &-title{
+    font-family: 'Anton', sans-serif;
+    font-size: 5.5rem;
+    color: $c-primary;
+    font-weight: 500;
+    line-height: 5.75rem;
+  }
+  &-subtitle{
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 2.25rem;
+    margin: 1.5rem 0 1.5rem
+  }
+  &-desc{
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem 0 4rem 0
+  }
 }

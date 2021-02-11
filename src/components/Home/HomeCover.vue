@@ -1,5 +1,5 @@
 <template>
-  <div class="home-cover home-bg" style="background-image: url('src/assets/home-cover.jpg');">
+  <div class="home-cover">
     <div class="home-cover-content grid mlr-main">
       <div class="home-cover-content-inner">
         <h1 class="t-title">KRYSTOF ZAHUMENSKY</h1>

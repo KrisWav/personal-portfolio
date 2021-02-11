@@ -15,30 +15,50 @@ export default {
 @import "../scss/main.scss";
 .topbar{
   top: 72px;
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  transition: $a-wow;
   padding: 0 72px 0 72px;
   z-index: $zi-topbar;
   &-logo{
     height: 32px;
     width: 32px;
+    display: block;
+    background-color: $c-primary;
   }
   &-menu{
-    ::before, ::after{
-      width: 32px;
+    height: 32px;
+    width: 32px;
+    position: fixed;
+    right: 72px;
+    margin-left: auto;
+    transition: $a-wow;
+    cursor: pointer;
+    &:before, &:after{
+      content: '';
+      width: 100%;
+      transition: $a-wow;
+      position: absolute;
       height: 2px;
-      position: relative;
       display: block;
       background-color: $c-primary;
     }
-    ::before{
-      top: 6px;
+    &:before{
+      top: 8px;
     }
-    ::after{
-      bottom: 6px;
+    &:after{
+      bottom: 8px;
+    }
+    &:hover{
+        &:before{
+          top: 6px;
+        }
+        &:after{
+          bottom: 6px;
+        }
     }
   }
 }

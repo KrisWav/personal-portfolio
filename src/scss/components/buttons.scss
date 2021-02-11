@@ -1,0 +1,26 @@
+.btn-link{
+  text-decoration: none;
+  border: none;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 700;
+  background: none;
+  color: $c-primary;
+  cursor: pointer;
+  padding-right: 118px;
+  font-size: 1.125rem;
+  &:before, &:after{
+    content: '';
+    width: 96px;
+    height: 4px;
+    background: $c-primary;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 2px);
+    transform: translateX(0%);
+    transition: $a-wow;
+  }
+}
+button:focus{
+  border: 0;
+}
