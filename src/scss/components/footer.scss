@@ -1,0 +1,53 @@
+.footer{
+  height: auto;
+  width: 100%;
+  background-image: url('~@/assets/footer-bg.jpg');
+  background-position: center;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &-content{
+    height: 100vh;
+    &-inner{
+      grid-column: 1 / span 4;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: start;
+      &-desc{
+        margin: 24px 0 36px !important;
+        line-height: 28px;
+      }
+    }
+    &-copyright{
+      position: absolute;
+      bottom: 64px;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    &-links{
+      grid-column: 12 / span 1;
+      text-align: right;
+      height: 100vh;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      &-group{
+        display: flex;
+
+        flex-flow: column;
+        a{
+          margin: 2px 0;
+          font-size: 1.125rem;
+          font-weight: 600;
+          text-decoration: none;
+          color: $c-secondary;
+          transition: $a-attack;
+          &:hover{
+            color: $c-primary;
+          }
+        }
+      }
+    }
+  }
+}

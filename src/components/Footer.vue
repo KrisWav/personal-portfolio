@@ -1,0 +1,42 @@
+<template>
+  <div class="footer">
+    <div class="footer-content grid mlr-main">
+      <div class="footer-content-inner">
+        <div class="footer-content-inner-title">
+          <div class="t-title">DON'T BE SHY.</div>
+          <div class="t-title t-secondary">I DON'T BITE.</div>
+        </div>
+        <div class="footer-content-inner-desc t-desc">Contact me on Twitter, Instagram or simply email. I’d love to talk about anything - from development and tech to music. Also, did I mention Cavetown?</div>
+        <button class="btn btn-link">Let's get in touch!</button>
+      </div>
+      <div class="footer-content-links">
+        <div class="footer-content-links-group">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+        </div>
+        <div class="footer-content-links-group" style="margin: 24px 0;">
+          <a href="#">Rollsafely</a>
+          <a href="#">AMF</a>
+        </div>
+        <div class="footer-content-links-group">
+          <a href="#">Linkedin</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+          <a href="#">Github</a>
+          <a href="#">Linktree</a>
+        </div>
+      </div>
+      <div class="footer-content-copyright">Made with love and coffee in Hradec Kralove, Czech Republic.</div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Footer'
+}
+</script>
+
+<style scoped>
+
+</style>

@@ -4,16 +4,19 @@
     <div class="content">
       <Home></Home>
     </div>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Topbar from '@/components/Topbar'
 import Home from '@/pages/Home'
+import Footer from '@/components/Footer'
 
 export default {
   name: 'App',
   components: {
+    Footer,
     Home,
     Topbar
   }

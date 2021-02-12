@@ -1,13 +1,14 @@
 .techstack{
   display: flex;
   flex-flow: column;
-  margin: 64px 0 0 0;
+  margin: 16px 0 0 0;
   &-item{
-
+    margin-top: 48px;
     &-type{
       grid-column: 1;
-      font-size: 1.25rem;
+      font-size: 1.375rem;
       font-style: italic;
+      padding-top: 6px;
     }
     &-info{
       grid-column: 5 / span 6;
@@ -15,21 +16,21 @@
       &-title{
         font-size: 2rem;
         color: $c-primary;
-        margin-bottom: 8px;
+        margin-bottom: 16px;
       }
       &-desc{
         font-size: 1.125rem;
-        font-weight: 500;
-        line-height: 1.5rem;
+        font-weight: 600;
+        line-height: 1.875rem;
       }
       &:after{
         content: '';
         position: absolute;
-        top: 0px;
-        left: -98px;
+        top: 22px;
+        left: -180px;
         height: 4px;
         grid-column: 3;
-        width: 96px;
+        width: 144px;
         background-color: $c-primary;
         display: block;
       }
