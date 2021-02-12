@@ -60,3 +60,23 @@ a{
     display: inline;
   }
 }
+
+@media screen and (max-width: $bp-desktop){
+  .t{
+    &-title{
+      font-size: 4.5rem;
+      line-height: 4.75rem;
+    }
+    &-subtitle{
+      font-size: 1.875rem;
+      line-height: 2.125rem;
+    }
+    &-desc{
+      margin: 0.5rem 0 0;
+    }
+    &-about{
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+  }
+}

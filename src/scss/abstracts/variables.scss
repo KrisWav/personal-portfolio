@@ -1,12 +1,19 @@
 //z index
 $zi-topbar: 100;
-$zi-menu: 1000;
+$zi-menu: 500;
+$zi-loader: 100;
 
 //colors
 $c-primary: #FFFFFF;
-$c-secondary: #968ca0;
+$c-secondary: #cabcd2;
 $c-background: #070707;
 
 //ANIMATIONS
 $a-attack: cubic-bezier(.1,.84,.26,1) 0.8s;
 $a-linear: 0.4s;
+
+//BREAKPOINTS
+$bp-desktop: 1600px;
+$bp-tablet-w: 1360px;
+$bp-tablet: 1160px;
+$bp-phone: 800px;

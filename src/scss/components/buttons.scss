@@ -41,8 +41,8 @@
     transition: $a-attack;
     &:hover{
       transform: translate(10px, 10px);
-      background-color: $c-primary;
-      color: $c-background;
+      //background-color: $c-primary;
+      //color: $c-background;
     }
   }
   &-b{
