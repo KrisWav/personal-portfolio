@@ -20,7 +20,7 @@ export default {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  transition: $a-wow;
+  transition: $a-attack;
   padding: 0 72px 0 72px;
   z-index: $zi-topbar;
   &-logo{
@@ -35,12 +35,12 @@ export default {
     position: fixed;
     right: 72px;
     margin-left: auto;
-    transition: $a-wow;
+    transition: $a-attack;
     cursor: pointer;
     &:before, &:after{
       content: '';
       width: 100%;
-      transition: $a-wow;
+      transition: $a-attack;
       position: absolute;
       height: 2px;
       display: block;
@@ -54,10 +54,10 @@ export default {
     }
     &:hover{
         &:before{
-          top: 6px;
+          transform: translateY(-3px);
         }
         &:after{
-          bottom: 6px;
+          transform: translateY(3px);
         }
     }
   }

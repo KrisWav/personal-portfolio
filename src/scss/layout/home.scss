@@ -2,7 +2,7 @@
   &-cover{
     height: 100vh;
     width: 100%;
-    //background-image: url("../../assets/home-cover.jpg");
+    background-image: url('~@/assets/home/home-cover.jpg');
     z-index: 10;
     background-position: center;
     background-size: cover;
@@ -18,6 +18,18 @@
           position: absolute;
           bottom: 72px;
         }
+      }
+    }
+  }
+  &-about{
+    padding: 96px 0;
+    &-content{
+      grid-column: 1 / span 6;
+    }
+    &-image{
+      grid-column: 8 / span 4;
+      img{
+        width: 100%;
       }
     }
   }

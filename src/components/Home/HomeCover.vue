@@ -5,7 +5,7 @@
         <h1 class="t-title">KRYSTOF ZAHUMENSKY</h1>
         <h2 class="t-subtitle">Programming student and entrepreneur based in Czech Republic.</h2>
         <p class="t-desc">Moje krasny vyflexeny moto, po kterym se kazdymu bude motat hlava.</p>
-        <button class="btn-link">Let's get in touch!</button>
+        <button class="btn btn-link">Let's get in touch!</button>
       </div>
     </div>
   </div>
