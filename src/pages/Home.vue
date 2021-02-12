@@ -3,6 +3,7 @@
     <HomeCover/>
     <HomeAbout/>
     <HomeProjects/>
+    <HomeTechstack/>
   </div>
 </template>
 
@@ -10,9 +11,10 @@
 import HomeCover from '@/components/Home/HomeCover'
 import HomeAbout from '@/components/Home/HomeAbout'
 import HomeProjects from '@/components/Home/HomeProjects'
+import HomeTechstack from '@/components/Home/HomeTechstack'
 export default {
   name: 'Home',
-  components: { HomeProjects, HomeCover, HomeAbout }
+  components: { HomeTechstack, HomeProjects, HomeCover, HomeAbout }
 }
 </script>
 

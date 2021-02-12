@@ -34,28 +34,59 @@
     }
   }
   &-projects{
+    padding: 96px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 72px;
   }
   &-project{
-
-    img{
+    overflow: hidden;
+    &-image{
       width: 100%;
+      overflow: hidden;
       display: block;
       cursor: pointer;
       object-fit: cover;
-      transform: scale(1);
-      overflow: hidden;
-      transition: $a-attack;
-      &:hover{
-        transform: scale(1.1);
+      &-desktop{
+      }
+      &-phone{
+        display: none !important;
+      }
+      img{
+        width: 100%;
+        display: block;
+        cursor: pointer;
+        object-fit: cover;
+        transform: scale(1);
+        overflow: hidden;
+        transition: $a-attack;
+        &:hover{
+          transform: scale(1.05);
+        }
       }
     }
-    &-image-desktop{
+    &-info{
+      padding: 24px 32px 0 32px;
+      &-title{
+        font-size: 1.875rem;
+        color: $c-primary;
+        font-weight: 700;
+        margin: 0 0 4px;
+      }
+      &-caption{
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0 0 24px;
+      }
+      &-desc{
+        font-size: 1rem;
+        font-weight: 500;
+        display: none;
+      }
     }
-    &-image-phone{
-      display: none !important;
-    }
+  }
+  &-techstack{
+    padding: 96px 0 96px;
+    border-top: solid 1px $c-grey;
   }
 }

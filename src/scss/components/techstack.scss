@@ -1,0 +1,38 @@
+.techstack{
+  display: flex;
+  flex-flow: column;
+  margin: 64px 0 0 0;
+  &-item{
+
+    &-type{
+      grid-column: 1;
+      font-size: 1.25rem;
+      font-style: italic;
+    }
+    &-info{
+      grid-column: 5 / span 6;
+      position: relative;
+      &-title{
+        font-size: 2rem;
+        color: $c-primary;
+        margin-bottom: 8px;
+      }
+      &-desc{
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: -98px;
+        height: 4px;
+        grid-column: 3;
+        width: 96px;
+        background-color: $c-primary;
+        display: block;
+      }
+    }
+  }
+}
