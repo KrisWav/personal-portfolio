@@ -33,4 +33,29 @@
       }
     }
   }
+  &-projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 72px;
+  }
+  &-project{
+
+    img{
+      width: 100%;
+      display: block;
+      cursor: pointer;
+      object-fit: cover;
+      transform: scale(1);
+      overflow: hidden;
+      transition: $a-attack;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+    &-image-desktop{
+    }
+    &-image-phone{
+      display: none !important;
+    }
+  }
 }
