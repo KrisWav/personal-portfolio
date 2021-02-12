@@ -22,7 +22,6 @@ export default {
   width: 100%;
   transition: $a-attack;
   padding: 0 72px 0 72px;
-  z-index: $zi-topbar;
   &-logo{
     height: 32px;
     width: 32px;
@@ -34,6 +33,7 @@ export default {
     width: 32px;
     position: fixed;
     right: 72px;
+    z-index: $zi-topbar;
     margin-left: auto;
     transition: $a-attack;
     cursor: pointer;

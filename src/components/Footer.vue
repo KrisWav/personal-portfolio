@@ -20,13 +20,13 @@
         </div>
         <div class="footer-content-links-group">
           <a href="#">Linkedin</a>
-          <a href="#">Twitter</a>
-          <a href="#">Instagram</a>
-          <a href="#">Github</a>
-          <a href="#">Linktree</a>
+          <a href="https://twitter.com/krystofza">Twitter</a>
+          <a href="https://www.instagram.com/krystof_uwu/">Instagram</a>
+          <a href="https://github.com/BrOwOken">Github</a>
+          <a href="https://linktr.ee/zahumensky">Linktree</a>
         </div>
       </div>
-      <div class="footer-content-copyright">Made with love and coffee in Hradec Kralove, Czech Republic.</div>
+      <div class="footer-content-copyright">Made with love and lots of coffee in Hradec Kralove, Czech Republic.</div>
     </div>
   </div>
 </template>

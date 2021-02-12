@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Topbar></Topbar>
+    <Menu/>
     <div class="content">
       <Home></Home>
     </div>
@@ -12,13 +13,15 @@
 import Topbar from '@/components/Topbar'
 import Home from '@/pages/Home'
 import Footer from '@/components/Footer'
+import Menu from '@/components/Menu'
 
 export default {
   name: 'App',
   components: {
     Footer,
     Home,
-    Topbar
+    Topbar,
+    Menu
   }
 }
 </script>
