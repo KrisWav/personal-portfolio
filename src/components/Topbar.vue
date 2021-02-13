@@ -1,13 +1,23 @@
 <template>
   <div class="topbar">
     <a class="topbar-logo"></a>
-    <div class="topbar-menu"></div>
+    <div class="topbar-menu" v-on:click="menuAction"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Topbar'
+  name: 'Topbar',
+  methods: {
+    menuAction: function () {
+      const menu = event.target
+      if (menu.classList.contains('topbar-menu-opened')) {
+        menu.classList.remove('topbar-menu-opened')
+      } else {
+        menu.classList.add('topbar-menu-opened')
+      }
+    }
+  }
 }
 </script>
 
@@ -37,6 +47,22 @@ export default {
     margin-left: auto;
     transition: $a-attack;
     cursor: pointer;
+    &-opened{
+      &:before{
+        transform: translateY(7px);
+      }
+      &:after{
+        transform: translateY(-7px);
+      }
+      &:hover{
+        &:before{
+          transform: translateY(7px) !important;
+        }
+        &:after{
+          transform: translateY(-7px) !important;
+        }
+      }
+    }
     &:before, &:after{
       content: '';
       width: 100%;
@@ -53,12 +79,12 @@ export default {
       bottom: 8px;
     }
     &:hover{
-        &:before{
-          transform: translateY(-3px);
-        }
-        &:after{
-          transform: translateY(3px);
-        }
+      &:before{
+        transform: translateY(-3px);
+      }
+      &:after{
+        transform: translateY(3px);
+      }
     }
   }
 }
@@ -82,7 +108,23 @@ export default {
       }
       &:hover{
         &:after, &:before{
-          transform: translate(0);
+          transform: translate(0) !important;
+        }
+      }
+      &-opened{
+        &:before{
+          transform: translateY(5px) !important;
+        }
+        &:after{
+          transform: translateY(-5px) !important;
+        }
+        &:hover{
+          &:before{
+            transform: translateY(5px) !important;
+          }
+          &:after{
+            transform: translateY(-5px) !important;
+          }
         }
       }
     }

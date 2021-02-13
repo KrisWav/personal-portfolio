@@ -40,3 +40,24 @@
     }
   }
 }
+@media screen and(max-width: $bp-tablet){
+  .menu{
+    padding: 0 32px;
+    &-logo{
+      left: 32px;
+      top: 32px;
+      height: 24px;
+      width: 24px;
+    }
+    &-links{
+      grid-column: 2 / span 12;
+      margin-top: 96px;
+      li{
+        a{
+          line-height: 4rem;
+          font-size: 3.5rem;
+        }
+      }
+    }
+  }
+}
