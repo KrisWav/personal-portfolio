@@ -15,8 +15,8 @@
           <a href="#">About</a>
         </div>
         <div class="footer-content-links-group" style="margin: 24px 0;">
-          <a href="#">Rollsafely</a>
-          <a href="#">AMF</a>
+          <a href="https://rollsafely.com">Rollsafely</a>
+          <a href="https://askmefirst.com">AMF</a>
         </div>
         <div class="footer-content-links-group">
           <a href="#">Linkedin</a>
