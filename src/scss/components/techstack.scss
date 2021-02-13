@@ -38,3 +38,32 @@
     }
   }
 }
+@media screen and(max-width: $bp-tablet){
+  .techstack{
+    &-item{
+      display: flex !important;
+      flex-flow: column;
+      margin-left: 32px;
+      margin-top: 32px;
+      &-type{
+        font-size: 0.875rem;
+      }
+      &-info{
+        &-title{
+          font-size: 1.5rem;
+        }
+        &-desc{
+          font-size: 1rem;
+          line-height: 1.75rem;
+        }
+        &:after{
+          top: 16px;
+          left: -64px;
+          width: 48px;
+          height: 3px;
+        }
+      }
+
+    }
+  }
+}
