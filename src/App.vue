@@ -33,7 +33,6 @@ export default {
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  top: 0px;
   background-color: $c-background;
   color: $c-secondary;
 }

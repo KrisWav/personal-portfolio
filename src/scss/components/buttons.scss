@@ -9,11 +9,12 @@
     color: $c-primary;
     position: relative;
     padding-right: 118px;
+    padding-left: 0;
     font-size: 1.125rem;
     &:before, &:after{
       content: '';
       width: 96px;
-      height: 4px;
+      height: 3px;
       background: $c-primary;
       display: block;
       position: absolute;
@@ -67,4 +68,12 @@ button:focus{
 .btn-container{
   position: relative;
   margin-top: 64px;
+}
+@media screen and(max-width: $bp-tablet){
+  .btn-link{
+    padding-right: 80px;
+    &:before, &:after{
+      width: 64px;
+    }
+  }
 }

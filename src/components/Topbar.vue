@@ -62,4 +62,30 @@ export default {
     }
   }
 }
+@media screen and(max-width: $bp-tablet){
+  .topbar{
+    padding: 0px 32px;
+    top: 32px;
+    &-logo{
+      width: 24px;
+      height: 24px;
+    }
+    &-menu{
+      right: 32px;
+      width: 24px;
+      height: 24px;
+      &:before{
+        top: 6px;
+      }
+      &:after{
+        bottom: 6px;
+      }
+      &:hover{
+        &:after, &:before{
+          transform: translate(0);
+        }
+      }
+    }
+  }
+}
 </style>
