@@ -11,15 +11,15 @@
       </div>
       <div class="footer-content-links">
         <div class="footer-content-links-group">
-          <a href="#">Home</a>
-          <a href="#">About</a>
+          <router-link to="/">Home</router-link>
+          <router-link to="/about">About</router-link>
         </div>
         <div class="footer-content-links-group" style="margin: 24px 0;">
           <a href="https://rollsafely.com">Rollsafely</a>
           <a href="https://askmefirst.com">AMF</a>
         </div>
         <div class="footer-content-links-group">
-          <a href="#">Linkedin</a>
+          <a href="https://mail.zahumensky.me">Email</a>
           <a href="https://twitter.com/krystofza">Twitter</a>
           <a href="https://www.instagram.com/krystof_uwu/">Instagram</a>
           <a href="https://github.com/BrOwOken">Github</a>
