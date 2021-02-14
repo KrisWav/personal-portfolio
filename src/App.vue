@@ -3,7 +3,7 @@
     <Topbar></Topbar>
     <Menu/>
     <div class="content">
-      <Home></Home>
+      <router-view/>
     </div>
     <Footer/>
   </div>
@@ -11,15 +11,12 @@
 
 <script>
 import Topbar from '@/components/Topbar'
-import Home from '@/pages/Home'
 import Footer from '@/components/Footer'
 import Menu from '@/components/Menu'
-
 export default {
   name: 'App',
   components: {
     Footer,
-    Home,
     Topbar,
     Menu
   }
