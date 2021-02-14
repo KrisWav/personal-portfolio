@@ -2,8 +2,10 @@
   <div class="home-projects mlr-main">
     <div class="home-project">
       <div class="home-project-image">
-        <img class="home-project-image-desktop" src="~@/assets/home/projects/afm-desktop.jpg" alt="This is Rollsafely!">
-        <img class="home-project-image-phone" src="~@/assets/home/projects/afm.jpg" alt="This is Rollsafely!">
+        <a href="https://rollsafely.com">
+          <img class="home-project-image-desktop" src="~@/assets/home/projects/afm-desktop.jpg" alt="This is Rollsafely!">
+          <img class="home-project-image-phone" src="~@/assets/home/projects/afm.jpg" alt="This is Rollsafely!">
+        </a>
       </div>
       <div class="home-project-info">
         <h3 class="home-project-info-title">Rollsafely</h3>
@@ -13,8 +15,10 @@
     </div>
     <div class="home-project">
       <div class="home-project-image">
-        <img class="home-project-image-desktop" src="~@/assets/home/projects/afm-desktop.jpg" alt="This is Rollsafely!">
-        <img class="home-project-image-phone" src="~@/assets/home/projects/afm.jpg" alt="This is Rollsafely!">
+        <a href="https://rollsafely.com">
+          <img class="home-project-image-desktop" src="~@/assets/home/projects/afm-desktop.jpg" alt="This is Rollsafely!">
+          <img class="home-project-image-phone" src="~@/assets/home/projects/afm.jpg" alt="This is Rollsafely!">
+        </a>
       </div>
       <div class="home-project-info">
         <h3 class="home-project-info-title">Ask Me First</h3>
