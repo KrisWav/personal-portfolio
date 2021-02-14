@@ -20,8 +20,25 @@
       position: absolute;
       right: 0;
       top: calc(50% - 1px);
-      transform: translateX(0%);
       transition: $a-attack;
+    }
+    &:before{
+      transform: translateX(-150%);
+      opacity: 0%;
+    }
+    &:after{
+      opacity: 100%;
+      transform: translateX(0%);
+    }
+    &:hover{
+      &:before{
+        transform: translateX(0%);
+        opacity: 100%;
+      }
+      &:after{
+        opacity: 0%;
+        transform: translateX(150%);
+      }
     }
   }
   &-primary{
