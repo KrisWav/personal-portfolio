@@ -15,7 +15,7 @@
     </div>
     <div class="home-project">
       <div class="home-project-image">
-        <a href="https://rollsafely.com">
+        <a href="https://askfirst.me">
           <img class="home-project-image-desktop" src="~@/assets/home/projects/afm-desktop.jpg" alt="This is Rollsafely!">
           <img class="home-project-image-phone" src="~@/assets/home/projects/afm.jpg" alt="This is Rollsafely!">
         </a>

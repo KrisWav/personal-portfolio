@@ -16,7 +16,7 @@
         </div>
         <div class="footer-content-links-group" style="margin: 24px 0;">
           <a href="https://rollsafely.com">Rollsafely</a>
-          <a href="https://askmefirst.com">AMF</a>
+          <a href="https://askfirst.me">AskMeFirst</a>
         </div>
         <div class="footer-content-links-group">
           <a href="https://mail.zahumensky.me">Email</a>

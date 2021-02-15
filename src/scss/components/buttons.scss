@@ -10,6 +10,7 @@
     position: relative;
     padding-right: 118px;
     padding-left: 0;
+
     font-size: 1.125rem;
     &:before, &:after{
       content: '';
@@ -54,6 +55,7 @@
     align-items: center;
     z-index: 2;
     top: 0px;
+    box-sizing: border-box;
     left: 0px;
     display: flex;
     position: relative;
