@@ -7,7 +7,7 @@
           <div class="t-title t-secondary">I DON'T BITE.</div>
         </div>
         <div class="footer-content-inner-desc t-desc">Contact me on Twitter, Instagram or simply email. I’d love to talk about anything - from development and tech to music. Also, did I mention Cavetown?</div>
-        <a class="btn btn-link" href="https://linktr.ee/zahumensky">Let's get in touch!</a>
+        <a class="btn btn-link" href="https://linktr.ee/zahumensky" target="_blank">Let's get in touch!</a>
       </div>
       <div class="footer-content-links">
         <div class="footer-content-links-group">

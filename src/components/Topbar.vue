@@ -1,7 +1,7 @@
 <template>
   <div class="topbar">
     <a class="topbar-logo"></a>
-    <div class="topbar-menu" v-on:click="menuAction"></div>
+    <div class="topbar-menu" @click="menuAction()"></div>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
   name: 'Topbar',
   methods: {
-    menuAction: function () {
+    menuAction: () => {
       const menu = event.target
       if (menu.classList.contains('topbar-menu-opened')) {
         menu.classList.remove('topbar-menu-opened')
