@@ -1,22 +1,19 @@
 <template>
   <div class="topbar">
     <a class="topbar-logo"></a>
-    <div class="topbar-menu" @click="menuAction()"></div>
+    <div class="topbar-menu" :class="{'topbar-menu-opened' : getMenuState}" @click="setMenuState()"></div>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'Topbar',
+  computed: {
+    ...mapGetters(['getMenuState'])
+  },
   methods: {
-    menuAction: () => {
-      const menu = event.target
-      if (menu.classList.contains('topbar-menu-opened')) {
-        menu.classList.remove('topbar-menu-opened')
-      } else {
-        menu.classList.add('topbar-menu-opened')
-      }
-    }
+    ...mapActions(['setMenuState'])
   }
 }
 </script>

@@ -1,28 +1,24 @@
 <template>
-  <div class="menu grid">
+  <div v-if="getMenuState" class="menu grid">
     <div class="menu-logo"></div>
     <ul class="menu-links">
-      <li><router-link to="/">HOME</router-link></li>
-      <li><router-link to="/about">ABOUT</router-link></li>
+      <li><router-link v-on:click.native="setMenuState()" to="/">HOME</router-link></li>
+      <li><router-link v-on:click.native="setMenuState()" to="/about">ABOUT</router-link></li>
       <li><a href="https://linktr.ee/zahumensky" target="_blank">CONTACT</a></li>
     </ul>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
   name: 'Menu',
-  props: {
-    menuOpen: Boolean
+  computed: {
+    ...mapGetters(['getMenuState'])
   },
   methods: {
-    menuAction: () => {
-      if (this.menuOpen === true) {
-        this.$emit('close')
-      } else {
-        this.$emit('open')
-      }
-    }
+    ...mapActions(['setMenuState'])
   }
 }
 </script>
