@@ -1,12 +1,10 @@
 .menu{
   z-index: $zi-menu;
   position: fixed;
-  top: 0;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   padding: 0 72px;
-  transition: $a-attack;
   background-color: $c-menu-bg;
   &-logo{
     display: block;

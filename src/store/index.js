@@ -20,7 +20,11 @@ export default new Vuex.Store({
   actions: {
     setMenuState: function () {
       this.commit('menuChangeState')
-      console.log('menu state changed')
+      if (this.getters.getMenuState === true) {
+        document.body.classList.toggle('scroll-hidden')
+      } else {
+        document.body.classList.remove('scroll-hidden')
+      }
     }
   },
   modules: {

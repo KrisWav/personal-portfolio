@@ -1,9 +1,11 @@
 @import "abstracts/variables";
+@import "abstracts/animations";
 
 @import "components/buttons";
 @import "components/techstack";
 @import "components/footer";
 @import "components/menu";
+
 @import "layout/home.scss";
 
 html{
@@ -12,6 +14,9 @@ html{
 }
 body{
   margin: 0;
+}
+.scroll-hidden{
+  overflow: hidden;
 }
 .mlr-main{
   margin: 0 72px 0 72px;
