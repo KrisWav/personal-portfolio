@@ -9,12 +9,24 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      title: 'Krystof Zahumensky',
+      metaTags: [
+        {
+          name: 'description',
+          content: '18 y.o. programmer, web developer, designer and entrepreneur from the Czech Republic.'
+        }
+      ]
+    }
   },
   {
     path: '/about',
     name: 'About',
-    component: About
+    component: About,
+    meta: {
+      title: 'About Krystof'
+    }
   }
 ]
 
