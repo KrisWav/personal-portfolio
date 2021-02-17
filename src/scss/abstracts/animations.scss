@@ -24,19 +24,19 @@ $a-menu: cubic-bezier(.07,.63,.36,.96) 0.5s;
       }
       &-enter{
         opacity: 0;
-        transform: translateX(96px);
+        transform: translateY(64px);
       }
       &-enter-to{
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
       }
       &-leave{
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
       }
       &-leave-to{
         opacity: 0;
-        transform: translateX(96px);
+        transform: translateY(6px);
       }
     }
   }
