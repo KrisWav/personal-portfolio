@@ -1,5 +1,5 @@
 <template>
-  <div>THIS IS AN ABOUT PAGE</div>
+  <div class="about">THIS IS AN ABOUT PAGE</div>
 </template>
 
 <script>
@@ -9,5 +9,7 @@ export default {
 </script>
 
 <style scoped>
-
+.about{
+  height: 6900px;
+}
 </style>
