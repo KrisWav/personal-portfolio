@@ -14,30 +14,8 @@ $a-menu: cubic-bezier(.07,.63,.36,.96) 0.5s;
     &-enter{
       opacity: 0 !important;
     }
-    &-leave-to{
+    &-leave-to {
       opacity: 0;
-    }
-
-    &-links{
-      &-enter-active, &-leave-active{
-        transition: all $a-menu !important;
-      }
-      &-enter{
-        opacity: 0;
-        transform: translateY(64px);
-      }
-      &-enter-to{
-        opacity: 1;
-        transform: translateY(0);
-      }
-      &-leave{
-        opacity: 1;
-        transform: translateY(0);
-      }
-      &-leave-to{
-        opacity: 0;
-        transform: translateY(64px);
-      }
     }
   }
 }
