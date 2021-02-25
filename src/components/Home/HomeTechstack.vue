@@ -1,7 +1,7 @@
 <template>
   <div class="home-techstack mlr-main">
     <h2 class="t-sectitle">Technologies I use</h2>
-    <div class="techstack">
+    <transition-group appear @enter="enterAnimation" @before-enter="beforeEnterAnimation" class="techstack" type="div">
       <div class="techstack-item grid" v-for=" item in this.techstackItems" :key="item.title">
         <div class="techstack-item-type">{{ item.type }}</div>
         <div class="techstack-item-info">
@@ -9,13 +9,34 @@
           <p class="techstack-item-info-desc">{{ item.description }}</p>
         </div>
       </div>
-    </div>
+    </transition-group>
   </div>
 </template>
 
 <script>
+import gsap from 'gsap'
+
 export default {
   name: 'HomeTechstack',
+  methods: {
+    enterAnimation: (el) => {
+      gsap.to(el, {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: el,
+          toggleActions: 'restart none none reverse',
+          end: 'top bottom',
+          start: 'top 85%'
+        },
+        transitionTimingFunction: 'cubic-bezier(.07,.63,.36,.96) 2s'
+      })
+    },
+    beforeEnterAnimation: (el) => {
+      el.style.transform = 'translateY(48px)'
+      el.style.opacity = 0
+    }
+  },
   data: () => {
     return {
       techstackItems: [

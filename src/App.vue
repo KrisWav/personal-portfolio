@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Loader/>
     <Topbar></Topbar>
     <Menu/>
     <div class="content">
@@ -13,12 +14,27 @@
 import Topbar from '@/components/Topbar'
 import Footer from '@/components/Footer'
 import Menu from '@/components/Menu'
+import Loader from '@/components/Loader'
+import { mapActions } from 'vuex'
 export default {
   name: 'App',
   components: {
+    Loader,
     Footer,
     Topbar,
     Menu
+  },
+  methods: {
+    ...mapActions(['setLoaderClose', 'setLoaderOpen'])
+  },
+  mounted () {
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        setTimeout(() => {
+          this.setLoaderClose()
+        }, 500)
+      }
+    }
   }
 }
 </script>

@@ -5,9 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    menuOpenState: false
+    menuOpenState: false,
+    loaderState: true
   },
   getters: {
+    getLoaderState: state => {
+      return state.loaderState
+    },
     getMenuState: state => {
       return state.menuOpenState
     }
@@ -15,6 +19,12 @@ export default new Vuex.Store({
   mutations: {
     menuChangeState: state => {
       state.menuOpenState = !state.menuOpenState
+    },
+    loaderClose: state => {
+      state.loaderState = false
+    },
+    loaderOpen: state => {
+      state.loaderState = true
     }
   },
   actions: {
@@ -25,6 +35,12 @@ export default new Vuex.Store({
       } else {
         document.body.classList.remove('scroll-hidden')
       }
+    },
+    setLoaderClose: function () {
+      this.commit('loaderClose')
+    },
+    setLoaderOpen: function () {
+      this.commit('loaderOpen')
     }
   },
   modules: {
