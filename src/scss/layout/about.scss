@@ -86,3 +86,53 @@
     }
   }
 }
+@media screen and (max-width: $bp-tablet){
+  .about{
+    &-cover{
+      padding: 224px 0 64px;
+      &-content{
+        display: flex !important;
+        width: 100%;
+        flex-flow: column;
+        align-items: start;
+      }
+      &-title{
+        margin-bottom: 64px;
+        h1{
+          line-height: 4rem;
+          &:before{
+            height: 48px;
+            width: 3px;
+            right: -26px;
+            bottom: -22px;
+          }
+          &:after{
+            height: 3px;
+            width: 48px;
+            right: -26px;
+            bottom: -22px;
+          }
+        }
+        &:before{
+          width: 48px;
+          height: 3px;
+          top: -22px;
+        }
+      }
+    }
+    &-quote{
+      padding: 64px 0;
+      &-content{
+        grid-column: 1 / span 12;
+      }
+      &-text{
+        font-size: 22px;
+        line-height: 36px;
+        margin-bottom: 24px;
+      }
+      &-author{
+        font-size: 20px;
+      }
+    }
+  }
+}
