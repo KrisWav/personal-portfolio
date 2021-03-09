@@ -1,0 +1,41 @@
+.about-gallery{
+  margin: 0 72px;
+  box-sizing: border-box;
+  &-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 32px 32px;
+    grid-template-areas:
+    "gi1 gi3 gi5"
+    "gi1 gi4 gi5"
+    "gi2 gi4 gi6";
+    box-sizing: border-box;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+.gi{
+  &1{
+    grid-area: gi1;
+  }
+  &2{
+    grid-area: gi2;
+  }
+  &3{
+    grid-area: gi3;
+  }
+  &4{
+    grid-area: gi4;
+  }
+  &5{
+    grid-area: gi5;
+  }
+  &6{
+    grid-area: gi6;
+  }
+}

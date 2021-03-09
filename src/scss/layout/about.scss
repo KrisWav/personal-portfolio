@@ -66,4 +66,23 @@
       }
     }
   }
+  &-quote{
+    padding: 144px 0;
+    &-content{
+      grid-column: 3 / span 8;
+    }
+    &-text{
+      font-size: 32px;
+      color: $c-primary;
+      font-style: italic;
+      line-height: 46px;
+      font-weight: 700;
+      margin: 0 0 24px 0;
+    }
+    &-author{
+      font-size: 26px;
+      color: $c-primary;
+      font-weight: 600;
+    }
+  }
 }
