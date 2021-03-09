@@ -3,7 +3,7 @@
   box-sizing: border-box;
   &-content{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
     gap: 32px 32px;
     height: 100%;

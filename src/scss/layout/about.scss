@@ -85,6 +85,9 @@
       font-weight: 600;
     }
   }
+  &-intro{
+    background-color: $c-purple-background;
+  }
 }
 @media screen and (max-width: $bp-tablet){
   .about{

@@ -3,6 +3,7 @@
     <AboutCover></AboutCover>
     <AboutGallery></AboutGallery>
     <AboutQuote></AboutQuote>
+    <AboutIntro></AboutIntro>
   </div>
 </template>
 
@@ -10,9 +11,10 @@
 import AboutCover from '@/components/About/AboutCover'
 import AboutQuote from '@/components/About/AboutQuote'
 import AboutGallery from '@/components/About/AboutGallery'
+import AboutIntro from '@/components/About/AboutIntro'
 export default {
   name: 'About',
-  components: { AboutGallery, AboutQuote, AboutCover }
+  components: { AboutIntro, AboutGallery, AboutQuote, AboutCover }
 }
 </script>
 
