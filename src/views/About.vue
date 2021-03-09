@@ -1,15 +1,19 @@
 <template>
-  <div class="about">THIS IS AN ABOUT PAGE</div>
+  <div class="about">
+    <AboutCover></AboutCover>
+    <AboutQuote></AboutQuote>
+  </div>
 </template>
 
 <script>
+import AboutCover from '@/components/About/AboutCover'
+import AboutQuote from '@/components/About/AboutQuote'
 export default {
-  name: 'About'
+  name: 'About',
+  components: { AboutQuote, AboutCover }
 }
 </script>
 
 <style scoped>
-.about{
-  height: 6900px;
-}
+
 </style>
