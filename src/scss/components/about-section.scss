@@ -1,7 +1,9 @@
 .about{
   &-section{
-    background-color: $c-primary;
     padding: 96px 0;
+    &-white{
+      background-color: $c-primary;
+    }
     &-title{
       grid-column: 1 / span 12;
     }
@@ -111,6 +113,57 @@
     img{
       //filter: blur(4px);
       transform: scale(1.05);
+    }
+  }
+}
+@media screen and(max-width: $bp-tablet){
+  .about-section{
+    padding: 64px 0;
+    &-content{
+      margin: 0 !important;
+      display: flex !important;
+      flex-flow: column;
+    }
+    &-title{
+      margin: 0 32px;
+    }
+    &-text{
+      margin: 32px 32px 32px 64px;
+      &:before{
+        top: 13px;
+        left: -64px;
+        width: 32px;
+      }
+    }
+    &-albums{
+      display: flex !important;
+      flex-flow: column;
+      &-title{
+        font-size: 1.375rem;
+        left: 0;
+        margin: 0 32px;
+      }
+      &-content{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px 16px;
+        margin: 48px 0 0;
+      }
+    }
+  }
+  .album{
+    &-inner{
+      padding: 22px;
+      &-year{
+        font-size: 0.875rem;
+      }
+      &-artist{
+        margin: 0 0 4px;
+        font-size: 1.125rem;
+        line-height: 1.25rem;
+      }
+      &-name{
+        font-size: 1rem;
+      }
     }
   }
 }
