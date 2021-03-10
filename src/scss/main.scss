@@ -6,6 +6,7 @@
 @import "components/footer";
 @import "components/menu";
 @import "components/gallery";
+@import "components/about-section";
 
 @import "layout/home.scss";
 @import "layout/about.scss";
@@ -57,7 +58,13 @@ a{
   &-sectitle{
     font-size: 2.625rem;
     color: $c-primary;
-
+  }
+  &-section-title{
+    font-size: 4rem;
+    font-family: 'Anton', sans-serif;
+    color: $c-primary;
+    font-weight: 500;
+    line-height: 4.25rem;
   }
   &-desc{
     font-size: 1rem;
@@ -78,6 +85,18 @@ a{
     font-family: 'Anton', sans-serif;
     font-weight: 300;
     color: $c-primary;
+  }
+  &-purple{
+    color: $c-secondary;
+  }
+  &-dark{
+    color: $c-dark;
+  }
+  &-paragraph{
+    font-size: 1rem;
+    font-weight: 500;
+    color: $c-secondary;
+    line-height: 1.75rem;
   }
 }
 

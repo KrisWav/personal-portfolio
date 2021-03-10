@@ -69,7 +69,7 @@
   &-quote{
     padding: 144px 0;
     &-content{
-      grid-column: 3 / span 8;
+      grid-column: 2 / span 10;
     }
     &-text{
       font-size: 32px;
@@ -87,6 +87,49 @@
   }
   &-intro{
     background-color: $c-purple-background;
+    padding: 96px 0;
+    &-content{
+    }
+    &-item{
+      display: flex;
+      flex-flow: row;
+      grid-column: 2 / span 10;
+      align-items: center;
+      &:nth-of-type(even){
+        margin-top: 64px;
+        flex-flow: row-reverse;
+        .about-intro-item-image{
+          margin: 0 17vw 0 0;
+        }
+      }
+      &-text{
+        flex: 1;
+        h3{
+          font-size: 1.625rem;
+          color: $c-primary;
+          font-weight: 700;
+          margin: 0 0 16px;
+        }
+        p{
+          font-size: 1rem;
+          line-height: 1.75rem;
+          margin-bottom: 16px;
+          font-weight: 500;
+          &:last-of-type{
+            margin: 0;
+          }
+        }
+      }
+      &-image{
+        flex: 1;
+        width: 100%;
+        height: auto;
+        margin: 0 0 0 17vw;
+        img{
+          width: 100%;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: $bp-tablet){
