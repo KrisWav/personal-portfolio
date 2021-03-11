@@ -92,6 +92,9 @@ a{
   &-dark{
     color: $c-dark;
   }
+  &-white{
+    color: $c-primary;
+  }
   &-paragraph{
     font-size: 1rem;
     font-weight: 500;
@@ -153,8 +156,8 @@ a{
       font-size: 4rem;
     }
     &-section-title{
-      font-size: 2.25rem;
-      line-height: 2.5rem;
+      font-size: 2.5rem;
+      line-height: 2.75rem;
     }
   }
   .btn-link{

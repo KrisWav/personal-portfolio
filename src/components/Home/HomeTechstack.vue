@@ -1,6 +1,9 @@
 <template>
   <div class="home-techstack mlr-main">
-    <h2 class="t-sectitle">Technologies I use</h2>
+    <div class="about-section-title">
+      <h2 class="t-section-title t-purple">FULLSTACK DEV</h2>
+      <h2 class="t-section-title t-white">TECHNOLOGY LOVER</h2>
+    </div>
     <transition-group appear @enter="enterAnimation" @before-enter="beforeEnterAnimation" class="techstack" type="div">
       <div class="techstack-item grid" v-for=" item in this.techstackItems" :key="item.title">
         <div class="techstack-item-type">{{ item.type }}</div>
