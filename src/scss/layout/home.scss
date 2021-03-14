@@ -97,7 +97,7 @@
         justify-items: end;
         &-inner{
           display: flex;
-          align-items: start;
+          align-items: flex-start;
           height: auto;
           justify-content: flex-end;
           .btn-link{

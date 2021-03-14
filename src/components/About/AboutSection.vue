@@ -33,42 +33,22 @@
 </template>
 
 <script>
-import gsap from 'gsap'
+import animations from '@/animations/gsap'
 
 export default {
   name: 'AboutSection',
   methods: {
     enterLeftAnimation: (el) => {
-      gsap.to(el, {
-        x: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: el,
-          toggleActions: 'play none none none',
-          start: '0px 80%'
-        },
-        transitionTimingFunction: 'cubic-bezier(.07,.63,.36,.96) 1.5s'
-      })
+      animations.enterFadeInX(el)
     },
     beforeEnterLeftAnimation: (el) => {
-      el.style.transform = 'translateX(-48px)'
-      el.style.opacity = 0
+      animations.beforeEnterFadeInX(el)
     },
     enterAnimation: (el) => {
-      gsap.to(el, {
-        y: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: el,
-          toggleActions: 'play none none none',
-          start: '0px 80%'
-        },
-        transitionTimingFunction: 'cubic-bezier(.07,.63,.36,.96) 1.5s'
-      })
+      animations.enterFadeInY(el)
     },
     beforeEnterAnimation: (el) => {
-      el.style.transform = 'translateY(48px)'
-      el.style.opacity = 0
+      animations.beforeEnterFadeInY(el)
     }
   },
   data: () => {
