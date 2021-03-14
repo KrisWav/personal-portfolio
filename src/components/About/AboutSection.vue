@@ -76,11 +76,11 @@ export default {
           link: 'https://open.spotify.com/album/74ShfU6i2GfPyqwdc5uGl7?si=eTLLWJqjRpiSE4lWwaOLLg'
         },
         {
-          artist: 'Bring Me The Horizon',
-          name: 'Sempiternal',
-          year: 2013,
-          image: 'sempiternal.jpg',
-          link: 'https://open.spotify.com/album/6IYPmM3xsOPL2XPSvf1ZAz?si=jaOIgBv_TC-gnbRpHpEkMw'
+          artist: 'nothing, nowhere.',
+          name: 'Reaper',
+          year: 2017,
+          image: 'reaper.jpg',
+          link: 'https://open.spotify.com/album/0pPPbYqZd2Qtf5kqrQNKue?si=tBYRoX79Q7ezl6w0mfSjng'
         }
       ]
     }

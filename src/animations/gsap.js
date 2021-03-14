@@ -17,18 +17,18 @@ function enterFadeInY(el) {
       toggleActions: props().toggleActions,
       start: props().start,
       end: props().end,
-      onEnter: () => {
-        console.log('onEnter')
-      },
-      onEnterBack: () => {
-        console.log('onEnterBack')
-      },
-      onLeaveBack: () => {
-        console.log('onLeaveBack')
-      },
-      onLeave: () => {
-        console.log('onLeave')
-      }
+      // onEnter: () => {
+      //   console.log('onEnter')
+      // },
+      // onEnterBack: () => {
+      //   console.log('onEnterBack')
+      // },
+      // onLeaveBack: () => {
+      //   console.log('onLeaveBack')
+      // },
+      // onLeave: () => {
+      //   console.log('onLeave')
+      // }
     },
     transitionTimingFunction: props().transitionTimingFunction
   })
