@@ -37,15 +37,14 @@ export default {
         opacity: 1,
         scrollTrigger: {
           trigger: el,
-          toggleActions: 'restart none none reverse',
-          end: 'top bottom',
-          start: '64px 70%'
+          toggleActions: 'play none none none',
+          start: '0px 80%'
         },
-        transitionTimingFunction: 'cubic-bezier(.07,.63,.36,.96) 2s'
+        transitionTimingFunction: 'cubic-bezier(.07,.63,.36,.96) 1.5s'
       })
     },
     beforeEnterAnimation: (el) => {
-      el.style.transform = 'translateY(64px)'
+      el.style.transform = 'translateY(48px)'
       el.style.opacity = 0
     }
   }

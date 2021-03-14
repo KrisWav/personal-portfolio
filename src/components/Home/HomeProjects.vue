@@ -1,6 +1,6 @@
 <template>
   <div class="home-projects mlr-main">
-    <transition appear @enter="animationEnter" @before-enter="animationBeforeEnter">
+    <transition appear @enter="enterAnimation" @before-enter="beforeEnterAnimation">
       <div class="home-project">
         <div class="home-project-image">
           <a href="https://rollsafely.com">
@@ -15,7 +15,7 @@
         </div>
       </div>
     </transition>
-    <transition appear @enter="animationEnter" @before-enter="animationBeforeEnter">
+    <transition appear @enter="enterAnimation" @before-enter="beforeEnterAnimation">
       <div class="home-project">
         <div class="home-project-image">
           <a href="https://askfirst.me">
@@ -41,22 +41,21 @@ gsap.registerPlugin(ScrollTrigger)
 export default {
   name: 'HomeProjects',
   methods: {
-    animationEnter: (el) => {
+    enterAnimation: (el) => {
       gsap.to(el, {
         y: 0,
         opacity: 1,
         scrollTrigger: {
           trigger: el,
-          toggleActions: 'restart none none reverse',
-          end: 'top bottom',
-          start: '64px 70%'
+          toggleActions: 'play none none none',
+          start: '0px 80%'
         },
-        transitionTimingFunction: 'cubic-bezier(.07,.63,.36,.96) 2s'
+        transitionTimingFunction: 'cubic-bezier(.07,.63,.36,.96) 1.5s'
       })
     },
-    animationBeforeEnter: (el) => {
+    beforeEnterAnimation: (el) => {
+      el.style.transform = 'translateY(48px)'
       el.style.opacity = 0
-      el.style.transform = 'translateY(64px)'
     }
   }
 }

@@ -33,7 +33,7 @@ $a-loader: cubic-bezier(.07,.63,.36,.96) 0.8s;
       transform: translateY(100vh);
     }
   }
-  &-home{
+  &-cover{
     &-enter-active, &-leave-active{
       transition: transform $a-loader, opacity $a-loader;
       transition-delay: 0.5s;

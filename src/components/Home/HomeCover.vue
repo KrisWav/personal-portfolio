@@ -1,6 +1,6 @@
 <template>
     <div class="home-cover">
-      <transition name="a-home">
+      <transition name="a-cover">
         <div v-if="!getLoaderState" class="home-cover-content grid mlr-main">
           <div class="home-cover-content-inner">
             <h1 class="t-title">KRYSTOF<br/>ZAHUMENSKY</h1>

@@ -1,9 +1,11 @@
 <template>
   <div class="home-techstack mlr-main">
-    <div class="about-section-title">
-      <h2 class="t-section-title t-purple">FULLSTACK DEV</h2>
-      <h2 class="t-section-title t-white">TECHNOLOGY LOVER</h2>
-    </div>
+    <transition appear @enter="enterLeftAnimation" @before-enter="beforeEnterLeftAnimation">
+      <div class="home-techstack-title">
+        <h2 class="t-section-title t-purple">FULLSTACK DEV</h2>
+        <h2 class="t-section-title t-white">TECHNOLOGY LOVER</h2>
+      </div>
+    </transition>
     <transition-group appear @enter="enterAnimation" @before-enter="beforeEnterAnimation" class="techstack" type="div">
       <div class="techstack-item grid" v-for=" item in this.techstackItems" :key="item.title">
         <div class="techstack-item-type">{{ item.type }}</div>
@@ -18,21 +20,38 @@
 
 <script>
 import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 
 export default {
   name: 'HomeTechstack',
   methods: {
+    enterLeftAnimation: (el) => {
+      gsap.to(el, {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: el,
+          toggleActions: 'play none none none',
+          start: '0px 80%'
+        },
+        transitionTimingFunction: 'cubic-bezier(.07,.63,.36,.96) 1.5s'
+      })
+    },
+    beforeEnterLeftAnimation: (el) => {
+      el.style.transform = 'translateX(-48px)'
+      el.style.opacity = 0
+    },
     enterAnimation: (el) => {
       gsap.to(el, {
         y: 0,
         opacity: 1,
         scrollTrigger: {
           trigger: el,
-          toggleActions: 'restart none none reverse',
-          end: 'top bottom',
-          start: 'top 85%'
+          toggleActions: 'play none none none',
+          start: '0px 80%'
         },
-        transitionTimingFunction: 'cubic-bezier(.07,.63,.36,.96) 2s'
+        transitionTimingFunction: 'cubic-bezier(.07,.63,.36,.96) 1.5s'
       })
     },
     beforeEnterAnimation: (el) => {
