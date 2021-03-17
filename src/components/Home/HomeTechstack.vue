@@ -1,20 +1,16 @@
 <template>
   <div class="home-techstack mlr-main">
-    <transition appear @enter="enterLeftAnimation" @before-enter="beforeEnterLeftAnimation">
-      <div class="home-techstack-title">
-        <h2 class="t-section-title t-purple">FULLSTACK DEV</h2>
-        <h2 class="t-section-title t-white">TECHNOLOGY LOVER</h2>
+    <div class="home-techstack-title">
+      <h2 class="t-section-title t-purple">FULLSTACK DEV</h2>
+      <h2 class="t-section-title t-white">TECHNOLOGY LOVER</h2>
+    </div>
+    <div class="techstack-item grid" v-for=" item in this.techstackItems" :key="item.title">
+      <div class="techstack-item-type">{{ item.type }}</div>
+      <div class="techstack-item-info">
+        <h3 class="techstack-item-info-title">{{ item.title }}</h3>
+        <p class="techstack-item-info-desc">{{ item.description }}</p>
       </div>
-    </transition>
-    <transition-group appear @enter="enterAnimation" @before-enter="beforeEnterAnimation" class="techstack" type="div">
-      <div class="techstack-item grid" v-for=" item in this.techstackItems" :key="item.title">
-        <div class="techstack-item-type">{{ item.type }}</div>
-        <div class="techstack-item-info">
-          <h3 class="techstack-item-info-title">{{ item.title }}</h3>
-          <p class="techstack-item-info-desc">{{ item.description }}</p>
-        </div>
-      </div>
-    </transition-group>
+    </div>
   </div>
 </template>
 
@@ -27,15 +23,16 @@ export default {
     enterLeftAnimation: (el) => {
       animations.enterFadeInX(el)
     },
-    beforeEnterLeftAnimation: (el) => {
-      animations.beforeEnterFadeInX(el)
-    },
     enterAnimation: (el) => {
       animations.enterFadeInY(el)
-    },
-    beforeEnterAnimation: (el) => {
-      animations.beforeEnterFadeInY(el)
     }
+  },
+  mounted () {
+    const techstackItems = document.querySelectorAll('.techstack-item')
+    for (var i = 0; i < techstackItems.length; i++) {
+      animations.enterFadeInY(techstackItems[i])
+    }
+    animations.enterFadeInX('.home-techstack-title')
   },
   data: () => {
     return {

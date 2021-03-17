@@ -27,9 +27,22 @@ export default {
   methods: {
     ...mapActions(['setLoaderClose', 'setLoaderOpen'])
   },
+  watch: {
+    // $route (to, from) {
+    //   this.setLoaderOpen()
+    //   document.onreadystatechange = () => {
+    //     if (document.readyState === 'complete') {
+    //       setTimeout(() => {
+    //         this.setLoaderClose()
+    //       }, 500)
+    //     }
+    //   }
+    // }
+  },
   mounted () {
     document.onreadystatechange = () => {
       if (document.readyState === 'complete') {
+        console.log('prdel')
         setTimeout(() => {
           this.setLoaderClose()
         }, 500)

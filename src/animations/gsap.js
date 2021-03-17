@@ -4,12 +4,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import props from '@/animations/props'
 gsap.registerPlugin(ScrollTrigger)
 
-function beforeEnterFadeInY (el) {
-  el.style.transform = props().styleTransformY
-  el.style.opacity = 0
-}
 function enterFadeInY(el) {
-  gsap.to(el, {
+  gsap.fromTo(el, {
+    y: 48,
+    opacity: 0
+  }, {
     y: 0,
     opacity: 1,
     scrollTrigger: {
@@ -34,7 +33,10 @@ function enterFadeInY(el) {
   })
 }
 function enterFadeInX(el) {
-  gsap.to(el, {
+  gsap.fromTo(el, {
+    x: -48,
+    opacity: 0
+  }, {
     x: 0,
     opacity: 1,
     scrollTrigger: {
@@ -46,9 +48,5 @@ function enterFadeInX(el) {
     transitionTimingFunction: props().transitionTimingFunction
   })
 }
-function beforeEnterFadeInX(el) {
-  el.style.transform = props().styleTransformX
-  el.style.opacity = 0
-}
 
-export default { enterFadeInY, beforeEnterFadeInY, enterFadeInX, beforeEnterFadeInX }
+export default { enterFadeInY, enterFadeInX }

@@ -1,35 +1,31 @@
 <template>
   <div class="home-projects mlr-main">
-    <transition appear @enter="enterAnimation" @before-enter="beforeEnterAnimation">
-      <div class="home-project">
-        <div class="home-project-image">
-          <a href="https://rollsafely.com">
-            <img class="home-project-image-desktop" src="~@/assets/home/projects/afm-desktop.jpg" alt="This is Rollsafely!">
-            <img class="home-project-image-phone" src="~@/assets/home/projects/afm.jpg" alt="This is Rollsafely!">
-          </a>
-        </div>
-        <div class="home-project-info">
-          <h3 class="home-project-info-title">Rollsafely</h3>
-          <div class="home-project-info-caption">Drug harm reduction</div>
-          <div class="home-project-info-desc">Rollsafely is a brand of drug identification and purity test kits. The safest way to take drugs is to not take them at all.</div>
-        </div>
+    <div class="home-project">
+      <div class="home-project-image">
+        <a href="https://rollsafely.com">
+          <img class="home-project-image-desktop" src="~@/assets/home/projects/afm-desktop.jpg" alt="This is Rollsafely!">
+          <img class="home-project-image-phone" src="~@/assets/home/projects/afm.jpg" alt="This is Rollsafely!">
+        </a>
       </div>
-    </transition>
-    <transition appear @enter="enterAnimation" @before-enter="beforeEnterAnimation">
-      <div class="home-project">
-        <div class="home-project-image">
-          <a href="https://askfirst.me">
-            <img class="home-project-image-desktop" src="~@/assets/home/projects/afm-desktop.jpg" alt="This is Rollsafely!">
-            <img class="home-project-image-phone" src="~@/assets/home/projects/afm.jpg" alt="This is Rollsafely!">
-          </a>
-        </div>
-        <div class="home-project-info">
-          <h3 class="home-project-info-title">Ask Me First</h3>
-          <div class="home-project-info-caption">Social media platform launchpad</div>
-          <div class="home-project-info-desc">Alternative social media launchpad and QNA app.</div>
-        </div>
+      <div class="home-project-info">
+        <h3 class="home-project-info-title">Rollsafely</h3>
+        <div class="home-project-info-caption">Drug harm reduction</div>
+        <div class="home-project-info-desc">Rollsafely is a brand of drug identification and purity test kits. The safest way to take drugs is to not take them at all.</div>
       </div>
-    </transition>
+    </div>
+    <div class="home-project">
+      <div class="home-project-image">
+        <a href="https://askfirst.me">
+          <img class="home-project-image-desktop" src="~@/assets/home/projects/afm-desktop.jpg" alt="This is Rollsafely!">
+          <img class="home-project-image-phone" src="~@/assets/home/projects/afm.jpg" alt="This is Rollsafely!">
+        </a>
+      </div>
+      <div class="home-project-info">
+        <h3 class="home-project-info-title">Ask Me First</h3>
+        <div class="home-project-info-caption">Social media platform launchpad</div>
+        <div class="home-project-info-desc">Alternative social media launchpad and QNA app.</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -38,12 +34,10 @@ import animations from '@/animations/gsap'
 
 export default {
   name: 'HomeProjects',
-  methods: {
-    enterAnimation: (el) => {
-      animations.enterFadeInY(el)
-    },
-    beforeEnterAnimation: (el) => {
-      animations.beforeEnterFadeInY(el)
+  mounted () {
+    const items = document.querySelectorAll('.home-project')
+    for (var i = 0; i < items.length; i++) {
+      animations.enterFadeInY(items[i])
     }
   }
 }
