@@ -1,7 +1,7 @@
 <template>
   <div class="about-cover mlr-main">
-    <transition appear name="a-cover">
-      <div class="about-cover-content grid">
+    <transition name="a-cover">
+      <div v-if="!getLoaderState" class="about-cover-content grid">
         <div class="about-cover-title">
           <h1 class="t-about-title">ABOUT ME</h1>
         </div>
@@ -17,8 +17,12 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  name: 'AboutCover'
+  name: 'AboutCover',
+  computed: {
+    ...mapGetters(['getLoaderState'])
+  }
 }
 </script>
 

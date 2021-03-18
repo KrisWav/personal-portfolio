@@ -11,8 +11,8 @@
       </div>
       <div class="footer-content-links">
         <div class="footer-content-links-group">
-          <router-link to="/">Home</router-link>
-          <router-link to="/about">About</router-link>
+          <a style="cursor: pointer;" @click="linkClick('/')">Home</a>
+          <a style="cursor: pointer;" @click="linkClick('/about')">About</a>
         </div>
         <div class="footer-content-links-group" style="margin: 24px 0;">
           <a href="https://rollsafely.com">Rollsafely</a>
@@ -32,9 +32,14 @@
 </template>
 
 <script>
-
+import store from '../store/index'
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  methods: {
+    linkClick: function (link) {
+      store.dispatch('routeTo', { link })
+    }
+  }
 }
 </script>
 

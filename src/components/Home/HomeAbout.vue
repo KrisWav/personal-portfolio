@@ -9,7 +9,7 @@
         <p class="t-about">Apart from that I love my friends and music. Cavetown and Twenty One Pilots are my most favourite artists. I’m an animal lover, piano and guitar player. Sometimes I even produce my own music.</p>
         <div class="btn-container">
           <!--<router-link to="/about" class="btn btn-primary">More about me</router-link>-->
-          <a @click="goTo('about')" class="btn btn-primary">More about me</a>
+          <a @click="goTo('/about')" class="btn btn-primary">More about me</a>
           <div class="btn-b-primary"></div>
         </div>
       </div>

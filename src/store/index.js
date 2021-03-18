@@ -41,15 +41,26 @@ export default new Vuex.Store({
       }
     },
     routeTo: function (context, dest) {
-      this.commit('loaderOpen')
-      setTimeout(() => {
-        Router.push(dest.link)
-        this.commit('menuClose')
-        document.body.classList.remove('scroll-hidden')
+      console.log(dest.link)
+      console.log(Router.currentRoute.name.toLowerCase())
+      if (Router.currentRoute.path !== dest.link) {
+        this.commit('loaderOpen')
         setTimeout(() => {
-          this.commit('loaderClose')
+          Router.push(dest.link)
+          this.commit('menuClose')
+          document.body.classList.remove('scroll-hidden')
+          setTimeout(() => {
+            this.commit('loaderClose')
+          }, 800)
         }, 800)
-      }, 800)
+      } else {
+        this.commit('menuClose')
+        if (this.getters.getMenuState === true) {
+          document.body.classList.toggle('scroll-hidden')
+        } else {
+          document.body.classList.remove('scroll-hidden')
+        }
+      }
     },
     setLoaderClose: function () {
       this.commit('loaderClose')

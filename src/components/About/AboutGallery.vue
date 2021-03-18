@@ -1,7 +1,7 @@
 <template>
   <div class="about-gallery">
-    <transition appear name="a-cover">
-      <div class="about-gallery-content">
+    <transition name="a-cover">
+      <div class="about-gallery-content" v-if="!getLoaderState">
         <img class="gi1" src="~@/assets/about/gallery/portrait.jpg" alt="me">
         <img class="gi2" src="~@/assets/about/gallery/prague.jpg" alt="me">
         <img class="gi3" src="~@/assets/about/gallery/norway.jpg" alt="me">
@@ -14,17 +14,11 @@
 </template>
 
 <script>
-import animations from '@/animations/gsap'
-
+import { mapGetters } from 'vuex'
 export default {
   name: 'AboutGallery',
-  methods: {
-    enterAnimation: (el) => {
-      animations.enterFadeInY(el)
-    },
-    beforeEnterAnimation: (el) => {
-      animations.beforeEnterFadeInY(el)
-    }
+  computed: {
+    ...mapGetters(['getLoaderState'])
   }
 }
 </script>

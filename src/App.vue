@@ -29,15 +29,9 @@ export default {
   methods: {
     ...mapActions(['setLoaderClose', 'setLoaderOpen', 'routeTo'])
   },
-  // watch: {
-  //   $route (to, from) {
-  //     this.routeTo()
-  //   }
-  // },
   mounted () {
     document.onreadystatechange = () => {
       if (document.readyState === 'complete') {
-        console.log('prdel')
         setTimeout(() => {
           this.setLoaderClose()
         }, 500)

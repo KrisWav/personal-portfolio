@@ -58,7 +58,7 @@ export default {
         },
         {
           routerLink: true,
-          to: 'about',
+          to: '/about',
           name: 'ABOUT'
         },
         {

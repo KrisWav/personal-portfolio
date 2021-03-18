@@ -40,14 +40,4 @@ const router = new VueRouter({
   routes: routes(store)
 })
 
-// router.beforeResolve((to, from, next) => {
-//   if (from.name !== null) {
-//     setTimeout(() => {
-//       next()
-//     }, 800)
-//   } else {
-//     next()
-//   }
-// })
-
 export default router
