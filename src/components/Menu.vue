@@ -8,7 +8,8 @@
         @before-enter="linksBeforeEnter"
         tag="ul" class="menu-links" >
         <li v-for="(link, index) in menuLinks" :key="link.name" :data-index="index">
-          <router-link v-if="link.routerLink" :to="link.to" @click.native="setMenuState()">{{link.name}}</router-link>
+          <!---<router-link v-if="link.routerLink" :to="link.to" @click.native="setMenuState()">{{link.name}}</router-link>-->
+          <a v-if="link.routerLink" style="cursor: pointer;" @click="menuLinkClick(link.to)">{{link.name}}</a>
           <a v-else :href="link.to" target="_blank" @click="setMenuState()">{{link.name}}</a>
         </li>
       </transition-group>
@@ -19,6 +20,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import gsap from 'gsap'
+import store from '../store/index'
 
 export default {
   name: 'Menu',
@@ -26,7 +28,7 @@ export default {
     ...mapGetters(['getMenuState'])
   },
   methods: {
-    ...mapActions(['setMenuState']),
+    ...mapActions(['setMenuState', 'routeTo']),
     linksEnter: (el, done) => {
       gsap.to(el, {
         opacity: 1,
@@ -40,6 +42,10 @@ export default {
     linksBeforeEnter: (el) => {
       el.style.opacity = 0
       el.style.transform = 'translateX(48px)'
+    },
+    menuLinkClick: (link) => {
+      // store.dispatch('setMenuState')
+      store.dispatch('routeTo', { link })
     }
   },
   data: () => {
@@ -52,7 +58,7 @@ export default {
         },
         {
           routerLink: true,
-          to: '/about',
+          to: 'about',
           name: 'ABOUT'
         },
         {

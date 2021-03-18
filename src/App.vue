@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <div id="app">
     <Loader/>
@@ -16,6 +17,7 @@ import Footer from '@/components/Footer'
 import Menu from '@/components/Menu'
 import Loader from '@/components/Loader'
 import { mapActions } from 'vuex'
+
 export default {
   name: 'App',
   components: {
@@ -25,20 +27,13 @@ export default {
     Menu
   },
   methods: {
-    ...mapActions(['setLoaderClose', 'setLoaderOpen'])
+    ...mapActions(['setLoaderClose', 'setLoaderOpen', 'routeTo'])
   },
-  watch: {
-    // $route (to, from) {
-    //   this.setLoaderOpen()
-    //   document.onreadystatechange = () => {
-    //     if (document.readyState === 'complete') {
-    //       setTimeout(() => {
-    //         this.setLoaderClose()
-    //       }, 500)
-    //     }
-    //   }
-    // }
-  },
+  // watch: {
+  //   $route (to, from) {
+  //     this.routeTo()
+  //   }
+  // },
   mounted () {
     document.onreadystatechange = () => {
       if (document.readyState === 'complete') {

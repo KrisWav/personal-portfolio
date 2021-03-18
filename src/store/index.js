@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import Router from '../router/index'
 
 Vue.use(Vuex)
 
@@ -20,6 +21,9 @@ export default new Vuex.Store({
     menuChangeState: state => {
       state.menuOpenState = !state.menuOpenState
     },
+    menuClose: state => {
+      state.menuOpenState = false
+    },
     loaderClose: state => {
       state.loaderState = false
     },
@@ -35,6 +39,17 @@ export default new Vuex.Store({
       } else {
         document.body.classList.remove('scroll-hidden')
       }
+    },
+    routeTo: function (context, dest) {
+      this.commit('loaderOpen')
+      setTimeout(() => {
+        Router.push(dest.link)
+        this.commit('menuClose')
+        document.body.classList.remove('scroll-hidden')
+        setTimeout(() => {
+          this.commit('loaderClose')
+        }, 800)
+      }, 800)
     },
     setLoaderClose: function () {
       this.commit('loaderClose')

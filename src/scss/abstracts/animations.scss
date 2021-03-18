@@ -9,6 +9,9 @@ $a-loader: cubic-bezier(.07,.63,.36,.96) 0.8s;
     &-enter-active, &-leave-active{
       transition: opacity $a-menu !important;
     }
+    &-leave-active{
+      animation-delay: 800ms;
+    }
     &-enter-to{
       opacity: 1 !important;
     }
@@ -31,6 +34,9 @@ $a-loader: cubic-bezier(.07,.63,.36,.96) 0.8s;
     }
     &-leave-to{
       transform: translateY(100vh);
+    }
+    &-leave{
+      transform: translateY(0);
     }
   }
   &-cover{
