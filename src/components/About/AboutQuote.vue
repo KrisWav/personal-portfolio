@@ -12,8 +12,16 @@ import animations from '@/animations/gsap'
 
 export default {
   name: 'AboutQuote',
+  data: () => {
+    return {
+
+    }
+  },
   mounted () {
     animations.enterFadeInY('.about-quote-content')
+  },
+  beforeDestroy () {
+    this.marqueeScrollTrigger.scrollTrigger.kill()
   }
 }
 </script>

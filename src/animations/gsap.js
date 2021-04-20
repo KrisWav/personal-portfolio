@@ -5,7 +5,9 @@ import props from '@/animations/props'
 gsap.registerPlugin(ScrollTrigger)
 
 function enterFadeInY(el) {
-  gsap.fromTo(el, {
+  let self = this
+
+  this.marqueeScrollTrigger = gsap.fromTo(el, {
     y: 48,
     opacity: 0
   }, {
@@ -31,22 +33,31 @@ function enterFadeInY(el) {
     },
     transitionTimingFunction: props().transitionTimingFunction
   })
+
+  setTimeout(function(){
+    self.marqueeScrollTrigger.scrollTrigger.refresh()
+  }, 10)
 }
 function enterFadeInX(el) {
-  gsap.fromTo(el, {
+  let self = el
+  self.marqueeScrollTrigger = gsap.fromTo(self.$refs.inner, {
     x: -48,
     opacity: 0
   }, {
     x: 0,
     opacity: 1,
     scrollTrigger: {
-      trigger: el,
+      trigger: self.$refs.marquee,
       toggleActions: props().toggleActions,
       start: props().start,
       end: props().end
     },
     transitionTimingFunction: props().transitionTimingFunction
   })
+
+  setTimeout(function(){
+    self.marqueeScrollTrigger.scrollTrigger.refresh()
+  }, 10)
 }
 
 export default { enterFadeInY, enterFadeInX }
